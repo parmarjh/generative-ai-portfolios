@@ -92,7 +92,7 @@ export const EDUCATIONS: EducationItem[] = [
   {
     id: 'edu-1',
     degree: 'Bachelor of Engineering / Technology in Computer Engineering',
-    institution: 'Gujarat Technological University (GTU)',
+    institution: 'Mahatma Gandhi University',
     period: '2019 – 2023',
     grade: 'First Class with Distinction',
     description: 'Rigorous coursework focused on Artificial Intelligence, Machine Learning, Data Structures & Algorithms, Computer Vision, Distributed Cloud Computing, and Operating Systems. Completed capstone research on neural gesture recognition and intelligent telemetry systems.',
