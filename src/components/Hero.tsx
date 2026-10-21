@@ -61,7 +61,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSimulator }) => {
             </h2>
 
             <p className="lead hero-lead">
-              I'm a <strong>Generative AI & Machine Learning Engineer</strong> specialized in building scalable, production-ready AI platforms. With <strong>4+ years</strong> of focused experience spanning <strong>Model Context Protocol (MCP)</strong> multi-agent architectures, enterprise hybrid RAG with reciprocal reranking, and edge-deployed <strong>Computer Vision</strong> models (MediaPipe 3D gesture tracking and video anomaly LRCNs).
+              I'm a <strong>Generative AI & Machine Learning Engineer</strong> specialized in building scalable, production-ready AI platforms. With <strong>8+ years</strong> of focused experience spanning <strong>Model Context Protocol (MCP)</strong> multi-agent architectures, enterprise hybrid RAG with reciprocal reranking, and edge-deployed <strong>Computer Vision</strong> models (MediaPipe 3D gesture tracking and video anomaly LRCNs).
             </p>
 
             <p className="hero-lead-secondary">

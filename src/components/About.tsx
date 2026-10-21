@@ -21,7 +21,7 @@ export const About: React.FC = () => {
                 Personal Info
               </h4>
               <p>
-                I am a <strong>Generative AI & Machine Learning Engineer</strong> based in Surat, Gujarat, India, with over <strong>4+ years</strong> of dedicated experience designing, fine-tuning, and deploying production AI systems. My core engineering expertise centers on <strong>Autonomous Multi-Agent Systems</strong> adhering to the <strong>Model Context Protocol (MCP)</strong>, <strong>Zero-Hallucination Enterprise RAG</strong> with hybrid reranking, and <strong>Edge Computer Vision</strong> with sub-40ms spatial-temporal neural networks.
+                I am a <strong>Generative AI & Machine Learning Engineer</strong> based in Surat, Gujarat, India, with over <strong>8+ years</strong> of dedicated experience designing, fine-tuning, and deploying production AI systems. My core engineering expertise centers on <strong>Autonomous Multi-Agent Systems</strong> adhering to the <strong>Model Context Protocol (MCP)</strong>, <strong>Zero-Hallucination Enterprise RAG</strong> with hybrid reranking, and <strong>Edge Computer Vision</strong> with sub-40ms spatial-temporal neural networks.
               </p>
               <p className="mt-2">
                 I work effectively both as an individual contributor and as a technical lead, building high-throughput data backbones on Google Cloud BigQuery and AWS, fine-tuning open-source LLMs via LoRA/QLoRA, and delivering production-grade architectures that solve tangible enterprise problems with measurable reliability and speed.
@@ -102,7 +102,7 @@ export const About: React.FC = () => {
               </li>
               <li className="list-inline-item project">
                 <Clock className="stat-icon" />
-                <h4 className="count-up">4+</h4>
+                <h4 className="count-up">8+</h4>
                 <h5>Years ML Experience</h5>
               </li>
               <li className="list-inline-item project">
