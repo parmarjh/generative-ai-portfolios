@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="24" fill="#0d121f" stroke="#00f2fe" stroke-width="3"/>
+  <text x="50" y="65" font-family="'Outfit', sans-serif" font-size="44" font-weight="900" fill="url(#grad)" text-anchor="middle">JP</text>
+  <circle cx="78" cy="24" r="6" fill="#10b981" />
+</svg>
