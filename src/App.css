@@ -1069,6 +1069,97 @@ table.skills-matrix td {
   max-width: 800px;
 }
 
+.btn-all-repos-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(138, 43, 226, 0.12);
+  border: 1px solid rgba(138, 43, 226, 0.35);
+  border-radius: 20px;
+  color: #c084fc;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.btn-all-repos-badge:hover {
+  background: var(--brand-purple);
+  color: #ffffff;
+  border-color: var(--brand-purple);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px var(--brand-purple-glow);
+}
+
+.portfolio-controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.portfolio-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 280px;
+  flex: 0 1 360px;
+}
+
+.portfolio-search-box .search-icon {
+  position: absolute;
+  left: 12px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.portfolio-search-input {
+  width: 100%;
+  padding: 8px 34px 8px 36px;
+  background: #25252b;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.86rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.portfolio-search-input:focus {
+  border-color: var(--brand-purple);
+  background: #2c2c34;
+  box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.15);
+}
+
+.portfolio-search-input::placeholder {
+  color: #64748b;
+  font-size: 0.84rem;
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 2px 4px;
+}
+
+.clear-search-btn:hover {
+  color: #ffffff;
+}
+
+.no-projects-text {
+  font-size: 1.05rem;
+  color: #94a3b8;
+}
+
 /* Filter buttons */
 ul.filter-btn,
 ul.blog-filter-btn {
@@ -1311,6 +1402,62 @@ ul.blog-filter-btn li.active {
 .btn-project-github:hover {
   background: #33333b;
   border-color: var(--border-light);
+}
+
+/* CTA Banner for All 100+ Repositories */
+.all-repos-cta-banner {
+  background: linear-gradient(135deg, #1e1e24 0%, #25252e 100%);
+  border: 1px solid rgba(138, 43, 226, 0.35);
+  border-radius: 8px;
+  padding: 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+}
+
+.cta-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: 700px;
+}
+
+.cta-banner-icon {
+  color: var(--brand-purple);
+  flex-shrink: 0;
+}
+
+.cta-banner-text h4 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.cta-banner-text p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .portfolio-controls-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .portfolio-search-box {
+    width: 100%;
+    min-width: unset;
+  }
+  .all-repos-cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* ==========================================================================
