@@ -58,13 +58,13 @@ export const Footer: React.FC = () => {
 
             <div className="footer-repo-link mt-3">
               <a
-                href="https://github.com/parmarjh/generative-ai-portfolio"
+                href="https://github.com/parmarjh/generative-ai-portfolios"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-repo-anchor"
               >
                 <Github size={14} />
-                <span>github.com/parmarjh/generative-ai-portfolio</span>
+                <span>github.com/parmarjh/generative-ai-portfolios</span>
               </a>
             </div>
           </div>

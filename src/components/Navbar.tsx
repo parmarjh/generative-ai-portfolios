@@ -147,7 +147,7 @@ export const Navbar: React.FC = () => {
 
         <div className="sidebar-quick-github mt-3">
           <a
-            href="https://github.com/parmarjh/generative-ai-portfolio"
+            href="https://github.com/parmarjh/generative-ai-portfolios"
             target="_blank"
             rel="noopener noreferrer"
             className="sidebar-repo-link"
