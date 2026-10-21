@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { PROJECTS_DATA, type Project } from '../data/projects'
-import { Github, ArrowUpRight, Cpu, Layers, CheckCircle2, Sparkles, Filter } from 'lucide-react'
+import { ArrowUpRight, Cpu, Layers, CheckCircle2, Sparkles, Filter } from 'lucide-react'
+import { Github } from './Icons'
 import { ProjectModal } from './ProjectModal'
 
 interface ProjectsProps {

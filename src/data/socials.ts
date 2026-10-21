@@ -1,18 +1,16 @@
+import React from 'react'
 import {
-  Linkedin,
-  Github,
-  Youtube,
   BookOpen,
   Code2,
-  Sparkles,
-  type LucideIcon
+  Sparkles
 } from 'lucide-react'
+import { Github, Linkedin, Youtube, HuggingFace, type IconProps } from '../components/Icons'
 
 export interface SocialLink {
   id: string
   name: string
   url: string
-  icon: LucideIcon
+  icon: React.FC<IconProps>
   ariaLabel: string
   handle: string
 }
@@ -38,7 +36,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
     id: 'huggingface',
     name: 'Hugging Face',
     url: 'https://huggingface.co/jhparmar',
-    icon: Sparkles,
+    icon: HuggingFace,
     ariaLabel: 'Visit Hugging Face profile',
     handle: 'jhparmar'
   },

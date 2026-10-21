@@ -1,6 +1,7 @@
 import React from 'react'
 import { SOCIAL_LINKS } from '../data/socials'
-import { Sparkles, Github, Terminal } from 'lucide-react'
+import { Sparkles, Terminal } from 'lucide-react'
+import { Github } from './Icons'
 
 export const Navbar: React.FC = () => {
   return (

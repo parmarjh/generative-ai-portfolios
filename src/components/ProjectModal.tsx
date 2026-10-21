@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { type Project } from '../data/projects'
-import { X, Github, ExternalLink, Copy, Check, GitCommit, Layers, Cpu, Activity } from 'lucide-react'
-import confetti from 'canvas-confetti'
+import { X, ExternalLink, Copy, Check, GitCommit, Layers, Cpu, Activity } from 'lucide-react'
+import { Github } from './Icons'
 
 interface ProjectModalProps {
   project: Project | null

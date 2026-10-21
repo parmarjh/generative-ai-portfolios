@@ -1,6 +1,7 @@
 import React from 'react'
 import { SOCIAL_LINKS } from '../data/socials'
-import { Github, Heart, Sparkles, Terminal } from 'lucide-react'
+import { Heart, Sparkles, Terminal } from 'lucide-react'
+import { Github } from './Icons'
 
 export const Footer: React.FC = () => {
   return (
