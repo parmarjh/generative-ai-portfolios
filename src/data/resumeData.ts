@@ -90,31 +90,67 @@ export const EXPERIENCES: ExperienceItem[] = [
 
 export const EDUCATIONS: EducationItem[] = [
   {
-    id: 'edu-1',
-    degree: 'Bachelor of Engineering / Technology in Computer Engineering',
-    institution: 'Mahatma Gandhi University',
-    period: '2019 – 2023',
-    grade: 'First Class with Distinction',
-    description: 'Rigorous coursework focused on Artificial Intelligence, Machine Learning, Data Structures & Algorithms, Computer Vision, Distributed Cloud Computing, and Operating Systems. Completed capstone research on neural gesture recognition and intelligent telemetry systems.',
-    certificateUrl: 'https://github.com/parmarjh'
+    id: 'edu-yc',
+    degree: 'Startup School – Founder Track & AI Venture Acceleration (W25-26)',
+    institution: 'Y Combinator',
+    period: 'Jan 2025 – Present',
+    grade: 'Grade A',
+    description: 'Comprehensive founder curriculum with the world’s top startup accelerator. Focus on building and scaling Generative AI startups, autonomous multi-agent systems, chatbot monetisation, and product-market engineering.',
+    certificateUrl: 'https://www.linkedin.com/in/jhparmar/'
   },
   {
-    id: 'edu-2',
-    degree: 'Higher Secondary Certificate (HSC) – Science Stream',
-    institution: 'Gujarat Secondary and Higher Secondary Education Board (GSEB)',
-    period: '2017 – 2019',
-    grade: 'Distinction (Mathematics, Physics, Chemistry & Computer Science)',
-    description: 'Core foundation in Advanced Mathematics, Calculus, Linear Algebra, Probability & Statistics, Physics, and foundational Computer Science with C++ and Algorithms.',
-    certificateUrl: 'https://github.com/parmarjh'
+    id: 'edu-iitm',
+    degree: 'Diploma / Master’s Degree in Data Science & Artificial Intelligence',
+    institution: 'Indian Institute of Technology, Madras (IIT Madras)',
+    period: 'Mar 2020 – Nov 2024',
+    grade: 'Grade A',
+    description: 'Rigorous coursework covering Machine Learning, Statistical Learning, Linear Algebra, Multivariate Calculus, Tools of Data Science, Deep Learning, and Artificial Intelligence algorithms.',
+    certificateUrl: 'https://www.linkedin.com/in/jhparmar/'
   },
   {
-    id: 'edu-3',
-    degree: 'Specialized Generative AI & Deep Learning Certifications',
-    institution: 'DeepLearning.AI & Cloud Platforms',
-    period: '2023 – 2024',
-    grade: 'Certified',
-    description: 'Advanced certifications in Large Language Models (LLMs), LangChain, Model Context Protocol (MCP), RAG architectures, Deep Learning Specialization with PyTorch, and BigQuery Data Engineering.',
-    certificateUrl: 'https://github.com/parmarjh'
+    id: 'edu-augmented',
+    degree: 'Master’s Specialization in AI, ML, GenAI, LLMs & Automation',
+    institution: 'Augmented A.I.',
+    period: 'Feb 2020 – Mar 2026',
+    grade: 'Grade A+',
+    description: 'Advanced specialization across Generative AI models, Large Language Models (LLMs), fine-tuning, RAG pipelines, intelligent chatbot development, agentic workflow automation tools, and Computer Vision.',
+    certificateUrl: 'https://www.linkedin.com/in/jhparmar/'
+  },
+  {
+    id: 'edu-arize',
+    degree: 'ML Observability Fundamentals Certification',
+    institution: 'Arize University',
+    period: 'Apr 2022 – Oct 2022',
+    grade: 'Certified (Passout)',
+    description: 'Comprehensive certification in production machine learning observability, model performance evaluation, embedding drift detection, real-time telemetry monitoring, and data quality assurance.',
+    certificateUrl: 'https://www.linkedin.com/in/jhparmar/'
+  },
+  {
+    id: 'edu-mgu',
+    degree: 'Bachelor of Computer Science – Computer Programming & Applications',
+    institution: 'Mahatma Gandhi University (MGU)',
+    period: '2014 – 2017',
+    grade: 'First Class',
+    description: 'Core foundational degree in Computer Science, Object-Oriented Programming (C/C++), Software Engineering, Database Management Systems (SQL), Operating Systems, and Web Application Architecture.',
+    certificateUrl: 'https://www.linkedin.com/in/jhparmar/'
+  },
+  {
+    id: 'edu-ncvt',
+    degree: 'Certificate in COPA & Web Design (Computer Operator & Programming Assistant)',
+    institution: 'NCVT MES (National Council for Vocational Training)',
+    period: '2007 – 2008',
+    grade: 'Secured 74.50% with First Class',
+    description: 'Practical vocational certification in programming fundamentals, C/C++, FoxPro, Tally, MS-Office suite, and foundational Web Development.',
+    certificateUrl: 'https://www.linkedin.com/in/jhparmar/'
+  },
+  {
+    id: 'edu-fidelis',
+    degree: 'Bachelor’s Degree in Computational Science & Economics',
+    institution: 'The Fidelis Partnership & BNI Surat',
+    period: 'Specialized Studies',
+    grade: 'Distinction',
+    description: 'Computational science methodologies, algorithmic problem solving, statistical mechanics, and quantitative economic modeling applied to enterprise digital transformation.',
+    certificateUrl: 'https://www.linkedin.com/in/jhparmar/'
   }
 ]
 
