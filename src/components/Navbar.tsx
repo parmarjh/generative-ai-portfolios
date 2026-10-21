@@ -1,59 +1,160 @@
-import React from 'react'
-import { SOCIAL_LINKS } from '../data/socials'
-import { Sparkles, Terminal } from 'lucide-react'
-import { Github } from './Icons'
+import React, { useState, useEffect } from 'react'
+import { Menu, X, ArrowUpRight } from 'lucide-react'
+import { Github, Linkedin, Youtube, HuggingFace } from './Icons'
 
 export const Navbar: React.FC = () => {
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
+
+  const navItems = [
+    { label: 'Home', href: '#home' },
+    { label: 'About Me', href: '#about' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Education', href: '#education' },
+    { label: 'Achivements', href: '#achivements' },
+    { label: 'Portfolio', href: '#portfolio' },
+    { label: 'Blog', href: '#blog' },
+    { label: 'Contact', href: '#contact' }
+  ]
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 120
+      for (let i = navItems.length - 1; i >= 0; i--) {
+        const item = navItems[i]
+        const el = document.querySelector(item.href)
+        if (el && el instanceof HTMLElement) {
+          if (el.offsetTop <= scrollPosition) {
+            setActiveSection(item.href.replace('#', ''))
+            break
+          }
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [navItems])
+
+  const toggleMobileNav = () => {
+    setMobileOpen(!mobileOpen)
+  }
+
+  const closeMobileNav = () => {
+    setMobileOpen(false)
+  }
+
   return (
-    <header className="navbar">
-      <div className="navbar-container">
-        <a href="#hero" className="navbar-logo" aria-label="Jatinkumar Parmar Portfolio Home">
-          <span className="logo-badge">JP</span>
-          <div className="logo-text-group">
-            <span className="logo-name">Jatinkumar Parmar</span>
-            <span className="logo-subtitle">Generative AI & ML</span>
+    <header className={`header ${mobileOpen ? 'nav-open' : ''}`} id="header">
+      {/* Brand logo for desktop sidebar & mobile bar */}
+      <div className="header-brand-container">
+        <a href="#home" className="header-brand-link" onClick={closeMobileNav}>
+          <div className="brand-logo-circle">JP</div>
+          <div className="brand-titles">
+            <span className="brand-name">Jatinkumar</span>
+            <span className="brand-title">Generative AI</span>
           </div>
         </a>
 
-        <nav className="navbar-nav" aria-label="Main Navigation">
-          <a href="#projects" className="nav-link">Production Systems</a>
-          <a href="#architecture-inspector" className="nav-link">AI Architecture</a>
-          <a href="#skills" className="nav-link">Tech Matrix</a>
-          <a href="#publications" className="nav-link">Articles & Media</a>
-          <a href="#contact" className="nav-link">Contact</a>
-        </nav>
+        {/* Mobile Hamburger toggle button */}
+        <button
+          className="navbar-toggler d-lg-none"
+          type="button"
+          onClick={toggleMobileNav}
+          aria-label="Toggle navigation"
+          aria-expanded={mobileOpen}
+        >
+          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
 
-        <div className="navbar-actions">
+      {/* Main navigation list */}
+      <nav className={`navbar p-0 ${mobileOpen ? 'mobile-visible' : ''}`}>
+        <div className={`navbar-collapse ${mobileOpen ? 'show' : ''}`} id="navmobile">
+          <ul className="navbar-nav mr-auto flex-column">
+            {navItems.map((item) => {
+              const secId = item.href.replace('#', '')
+              const isActive = activeSection === secId
+
+              return (
+                <li key={item.href} className="nav-item">
+                  <a
+                    href={item.href}
+                    onClick={closeMobileNav}
+                    className={`nav-link ${isActive ? 'active' : ''}`}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      </nav>
+
+      {/* Header contact & socials for desktop sidebar */}
+      <div className="contact d-none d-lg-block">
+        <div className="contact-item">
+          <h5>Social</h5>
+          <ul className="list-inline sidebar-social-list">
+            <li className="list-inline-item">
+              <a
+                href="https://github.com/parmarjh"
+                className="list-inline-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GitHub"
+              >
+                <Github size={16} />
+              </a>
+            </li>
+            <li className="list-inline-item">
+              <a
+                href="https://www.linkedin.com/in/jhparmar"
+                className="list-inline-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn"
+              >
+                <Linkedin size={16} />
+              </a>
+            </li>
+            <li className="list-inline-item">
+              <a
+                href="https://huggingface.co/jhparmar"
+                className="list-inline-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Hugging Face"
+              >
+                <HuggingFace size={16} />
+              </a>
+            </li>
+            <li className="list-inline-item">
+              <a
+                href="https://www.youtube.com/channel/UCSLMS3odjPxesH02jnhWMnA"
+                className="list-inline-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="YouTube"
+              >
+                <Youtube size={16} />
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="sidebar-quick-github mt-3">
           <a
             href="https://github.com/parmarjh/generative-ai-portfolio"
             target="_blank"
             rel="noopener noreferrer"
-            className="repo-pill-btn cyan-glow-hover"
-            aria-label="View source repository on GitHub"
+            className="sidebar-repo-link"
           >
-            <Github size={16} />
-            <span className="repo-pill-text">Star on GitHub</span>
-            <span className="repo-pill-badge">v1.0</span>
+            <span>v1.0 GitHub Repo</span>
+            <ArrowUpRight size={13} />
           </a>
-
-          <div className="navbar-socials" aria-label="Social Profiles">
-            {SOCIAL_LINKS.slice(0, 3).map((link) => {
-              const Icon = link.icon
-              return (
-                <a
-                  key={link.id}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={link.ariaLabel}
-                  className="social-icon-btn cyan-glow-hover"
-                  title={link.name}
-                >
-                  <Icon size={16} aria-hidden="true" />
-                </a>
-              )
-            })}
-          </div>
         </div>
       </div>
     </header>
